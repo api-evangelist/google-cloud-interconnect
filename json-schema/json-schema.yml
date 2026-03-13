@@ -1,0 +1,78 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/api-evangelist/google-cloud-interconnect/refs/heads/main/json-schema/json-schema.yml
+title: Google Cloud Interconnect
+description: An interconnect resource for establishing hybrid cloud connectivity
+type: object
+properties:
+  id:
+    type: string
+    description: Unique identifier for the resource
+  name:
+    type: string
+    description: Name of the interconnect
+    pattern: ^[a-z]([-a-z0-9]*[a-z0-9])?$
+  description:
+    type: string
+    description: An optional description of the interconnect
+  location:
+    type: string
+    format: uri
+    description: URL of the interconnect location
+  linkType:
+    type: string
+    enum:
+      - LINK_TYPE_ETHERNET_10G_LR
+      - LINK_TYPE_ETHERNET_100G_LR
+    description: Type of the link for this interconnect
+  requestedLinkCount:
+    type: integer
+    minimum: 1
+    description: Target number of physical links in the interconnect
+  interconnectType:
+    type: string
+    enum:
+      - IT_PRIVATE
+      - DEDICATED
+      - PARTNER
+    description: Type of interconnect
+  adminEnabled:
+    type: boolean
+    description: Whether the interconnect is administratively enabled
+  nocContactEmail:
+    type: string
+    format: email
+    description: Email address to contact the NOC
+  state:
+    type: string
+    enum:
+      - ACTIVE
+      - UNPROVISIONED
+    description: Current status of the interconnect
+  operationalStatus:
+    type: string
+    enum:
+      - OS_ACTIVE
+      - OS_UNPROVISIONED
+    description: Operational status of the interconnect
+  provisionedLinkCount:
+    type: integer
+    description: Number of links actually provisioned
+  interconnectAttachments:
+    type: array
+    items:
+      type: string
+      format: uri
+    description: URLs of attachments connected to this interconnect
+  selfLink:
+    type: string
+    format: uri
+    description: Server-defined URL for the resource
+  creationTimestamp:
+    type: string
+    format: date-time
+    description: Timestamp when the resource was created
+required:
+  - name
+  - interconnectType
+  - linkType
+  - requestedLinkCount

@@ -1,0 +1,35 @@
+"@context":
+  "@vocab": https://schema.org/
+  gcp: https://cloud.google.com/network-connectivity/docs/interconnect/reference/rest/v1/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  dcterms: http://purl.org/dc/terms/
+  Interconnect:
+    "@id": gcp:interconnects
+    "@type": "@id"
+  name:
+    "@id": schema:name
+    "@type": xsd:string
+  description:
+    "@id": schema:description
+    "@type": xsd:string
+  location:
+    "@id": gcp:location
+    "@type": "@id"
+  linkType:
+    "@id": gcp:linkType
+    "@type": xsd:string
+  interconnectType:
+    "@id": gcp:interconnectType
+    "@type": xsd:string
+  state:
+    "@id": gcp:state
+    "@type": xsd:string
+  interconnectAttachments:
+    "@id": gcp:interconnectAttachments
+    "@container": "@set"
+  dateCreated:
+    "@id": dcterms:created
+    "@type": xsd:dateTime
+  dateModified:
+    "@id": dcterms:modified
+    "@type": xsd:dateTime

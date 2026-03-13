@@ -1,0 +1,48 @@
+name: Google Cloud Interconnect
+description: >-
+  Google Cloud Interconnect provides high-bandwidth, low-latency connections
+  between your on-premises network and Google Cloud, enabling hybrid cloud
+  architectures through dedicated or partner interconnect options.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/google-cloud-interconnect/refs/heads/main/apis.yml
+created: '2026-03-13'
+modified: '2026-03-13'
+specificationVersion: '0.18'
+tags:
+  - Interconnect
+  - Hybrid Cloud
+  - Networking
+  - Google Cloud
+  - Dedicated Connectivity
+apis:
+  - name: Google Cloud Interconnect API
+    description: >-
+      The Google Cloud Interconnect API enables programmatic management of
+      interconnect connections, attachments, and locations for establishing
+      high-bandwidth connectivity between on-premises networks and Google Cloud.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://cloud.google.com/network-connectivity/docs/interconnect
+    baseURL: https://compute.googleapis.com/compute/v1
+    tags:
+      - Interconnect
+      - Attachments
+      - Dedicated Connections
+      - Partner Connections
+    properties:
+      - type: OpenAPI
+        url: openapi/openapi.yml
+      - type: JSONSchema
+        url: json-schema/json-schema.yml
+      - type: JSONLDContext
+        url: json-ld/json-ld.yml
+common:
+  - type: GettingStarted
+    url: https://cloud.google.com/network-connectivity/docs/interconnect/how-to
+  - type: Pricing
+    url: https://cloud.google.com/network-connectivity/docs/interconnect/pricing
+  - type: JSONLDContext
+    url: json-ld/json-ld.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
