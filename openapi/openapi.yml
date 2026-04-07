@@ -23,7 +23,7 @@ paths:
   /projects/{project}/global/interconnects:
     get:
       operationId: listInterconnects
-      summary: List interconnects
+      summary: Google Cloud Interconnect List interconnects
       description: Retrieves the list of interconnects available to the specified project.
       tags:
         - Interconnects
@@ -42,7 +42,7 @@ paths:
                 $ref: '#/components/schemas/InterconnectList'
     post:
       operationId: createInterconnect
-      summary: Create an interconnect
+      summary: Google Cloud Interconnect Create an interconnect
       description: Creates an interconnect in the specified project.
       tags:
         - Interconnects
@@ -68,7 +68,7 @@ paths:
   /projects/{project}/global/interconnects/{interconnect}:
     get:
       operationId: getInterconnect
-      summary: Get an interconnect
+      summary: Google Cloud Interconnect Get an interconnect
       description: Returns the specified interconnect resource.
       tags:
         - Interconnects
@@ -92,7 +92,7 @@ paths:
                 $ref: '#/components/schemas/Interconnect'
     delete:
       operationId: deleteInterconnect
-      summary: Delete an interconnect
+      summary: Google Cloud Interconnect Delete an interconnect
       description: Deletes the specified interconnect.
       tags:
         - Interconnects
@@ -117,7 +117,7 @@ paths:
   /projects/{project}/regions/{region}/interconnectAttachments:
     get:
       operationId: listInterconnectAttachments
-      summary: List interconnect attachments
+      summary: Google Cloud Interconnect List interconnect attachments
       description: Retrieves the list of interconnect attachments available in the specified region.
       tags:
         - InterconnectAttachments
@@ -142,7 +142,7 @@ paths:
   /projects/{project}/global/interconnectLocations:
     get:
       operationId: listInterconnectLocations
-      summary: List interconnect locations
+      summary: Google Cloud Interconnect List interconnect locations
       description: Retrieves the list of interconnect locations available to the specified project.
       tags:
         - InterconnectLocations
