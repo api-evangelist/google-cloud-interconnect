@@ -13,12 +13,12 @@ servers:
   - url: https://compute.googleapis.com/compute/v1
     description: Google Cloud Interconnect production endpoint
 tags:
-  - name: Interconnects
-    description: Manage interconnect connections
   - name: InterconnectAttachments
     description: Manage VLAN attachments for interconnects
   - name: InterconnectLocations
     description: Query available interconnect locations
+  - name: Interconnects
+    description: Manage interconnect connections
 paths:
   /projects/{project}/global/interconnects:
     get:

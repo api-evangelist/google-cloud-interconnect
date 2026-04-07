@@ -12,11 +12,11 @@ modified: '2026-03-16'
 specificationVersion: '0.19'
 type: Index
 tags:
-  - Interconnect
-  - Hybrid Cloud
-  - Networking
-  - Google Cloud
   - Dedicated Connectivity
+  - Google Cloud
+  - Hybrid Cloud
+  - Interconnect
+  - Networking
 apis:
   - name: Google Cloud Interconnect API
     description: >-
@@ -27,9 +27,9 @@ apis:
     humanURL: https://cloud.google.com/network-connectivity/docs/interconnect
     baseURL: https://compute.googleapis.com/compute/v1
     tags:
-      - Interconnect
       - Attachments
       - Dedicated Connections
+      - Interconnect
       - Partner Connections
     properties:
       - type: Documentation
