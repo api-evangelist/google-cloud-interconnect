@@ -1,0 +1,85 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud Interconnect API — InterconnectAttachments
+  description: 'Google Cloud Interconnect API — InterconnectAttachments. 1 operations. Lead operation: Google Cloud Interconnect
+    List interconnect attachments. Self-contained Naftiko capability covering one Google Cloud Interconnect business surface.'
+  tags:
+  - Google Cloud Interconnect
+  - InterconnectAttachments
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_INTERCONNECT_API_KEY: GOOGLE_CLOUD_INTERCONNECT_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-interconnectattachments
+    baseUri: https://compute.googleapis.com/compute/v1
+    description: Google Cloud Interconnect API — InterconnectAttachments business capability. Self-contained, no shared references.
+    resources:
+    - name: projects-project-regions-region-interconnectAttachments
+      path: /projects/{project}/regions/{region}/interconnectAttachments
+      operations:
+      - name: listinterconnectattachments
+        method: GET
+        description: Google Cloud Interconnect List interconnect attachments
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+        - name: region
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_CLOUD_INTERCONNECT_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: openapi-interconnectattachments-rest
+    port: 8080
+    description: REST adapter for Google Cloud Interconnect API — InterconnectAttachments. One Spectral-compliant resource
+      per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/projects/{project}/regions/{region}/interconnectattachments
+      name: projects-project-regions-region-interconnectattachments
+      description: REST surface for projects-project-regions-region-interconnectAttachments.
+      operations:
+      - method: GET
+        name: listinterconnectattachments
+        description: Google Cloud Interconnect List interconnect attachments
+        call: openapi-interconnectattachments.listinterconnectattachments
+        with:
+          project: rest.project
+          region: rest.region
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-interconnectattachments-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud Interconnect API — InterconnectAttachments. One tool per consumed operation,
+      routed inline through this capability's consumes block.
+    tools:
+    - name: google-cloud-interconnect-list-interconnect
+      description: Google Cloud Interconnect List interconnect attachments
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-interconnectattachments.listinterconnectattachments
+      with:
+        project: tools.project
+        region: tools.region
+      outputParameters:
+      - type: object
+        mapping: $.

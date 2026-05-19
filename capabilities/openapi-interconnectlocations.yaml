@@ -1,0 +1,79 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud Interconnect API — InterconnectLocations
+  description: 'Google Cloud Interconnect API — InterconnectLocations. 1 operations. Lead operation: Google Cloud Interconnect
+    List interconnect locations. Self-contained Naftiko capability covering one Google Cloud Interconnect business surface.'
+  tags:
+  - Google Cloud Interconnect
+  - InterconnectLocations
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_INTERCONNECT_API_KEY: GOOGLE_CLOUD_INTERCONNECT_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-interconnectlocations
+    baseUri: https://compute.googleapis.com/compute/v1
+    description: Google Cloud Interconnect API — InterconnectLocations business capability. Self-contained, no shared references.
+    resources:
+    - name: projects-project-global-interconnectLocations
+      path: /projects/{project}/global/interconnectLocations
+      operations:
+      - name: listinterconnectlocations
+        method: GET
+        description: Google Cloud Interconnect List interconnect locations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: project
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_CLOUD_INTERCONNECT_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: openapi-interconnectlocations-rest
+    port: 8080
+    description: REST adapter for Google Cloud Interconnect API — InterconnectLocations. One Spectral-compliant resource per
+      consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/projects/{project}/global/interconnectlocations
+      name: projects-project-global-interconnectlocations
+      description: REST surface for projects-project-global-interconnectLocations.
+      operations:
+      - method: GET
+        name: listinterconnectlocations
+        description: Google Cloud Interconnect List interconnect locations
+        call: openapi-interconnectlocations.listinterconnectlocations
+        with:
+          project: rest.project
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-interconnectlocations-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud Interconnect API — InterconnectLocations. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: google-cloud-interconnect-list-interconnect
+      description: Google Cloud Interconnect List interconnect locations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-interconnectlocations.listinterconnectlocations
+      with:
+        project: tools.project
+      outputParameters:
+      - type: object
+        mapping: $.
