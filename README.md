@@ -2,26 +2,24 @@
 
 Google Cloud Interconnect provides high-bandwidth, low-latency connections between your on-premises network and Google Cloud, enabling hybrid cloud architectures through dedicated or partner interconnect options.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/google-cloud-interconnect/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-cloud-interconnect/refs/heads/main/apis.yml)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-cloud-interconnect/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-cloud-interconnect/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Contract
-- **Position:** Consuming
-- **Access:** 3rd-Party
+- **Type:** Index
 
 ## Tags
 
-- Interconnect
-- Hybrid Cloud
-- Networking
-- Google Cloud
 - Dedicated Connectivity
+- Google Cloud
+- Hybrid Cloud
+- Interconnect
+- Networking
 
 ## Timestamps
 
 - **Created:** 2026-03-13
-- **Modified:** 2026-04-28
+- **Modified:** 2026-05-19
 
 ## APIs
 
@@ -29,29 +27,43 @@ Google Cloud Interconnect provides high-bandwidth, low-latency connections betwe
 
 The Google Cloud Interconnect API enables programmatic management of interconnect connections, attachments, and locations for establishing high-bandwidth connectivity between on-premises networks and Google Cloud.
 
-**Human URL:** [https://cloud.google.com/network-connectivity/docs/interconnect](https://cloud.google.com/network-connectivity/docs/interconnect)
-**Base URL:** https://compute.googleapis.com/compute/v1
-
-#### Properties
-
-- [OpenAPI](openapi/openapi.yml)
-- [JSON Schema](json-schema/json-schema.yml)
-- [JSON-LD Context](json-ld/json-ld.yml)
+- **Human URL:** [https://cloud.google.com/network-connectivity/docs/interconnect](https://cloud.google.com/network-connectivity/docs/interconnect)
+- **Base URL:** `https://compute.googleapis.com/compute/v1`
 
 #### Tags
 
-- Interconnect
 - Attachments
 - Dedicated Connections
+- Interconnect
 - Partner Connections
+
+#### Properties
+
+- [Documentation](https://cloud.google.com/network-connectivity/docs/interconnect/reference/rest)
+- [OpenAPI](openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Authentication](https://cloud.google.com/docs/authentication)
+- [Getting Started](https://cloud.google.com/network-connectivity/docs/interconnect/how-to)
+- [JSON Schema](json-schema/json-schema.yml) — [JSON Schema](https://json-schema.org/specification)
+- [J S O N L D Context](json-ld/json-ld.yml)
 
 ## Common Properties
 
+- [GitHub Organization](https://github.com/GoogleCloudPlatform)
+- [Portal](https://cloud.google.com/network-connectivity/docs/interconnect)
 - [Getting Started](https://cloud.google.com/network-connectivity/docs/interconnect/how-to)
+- [Documentation](https://cloud.google.com/network-connectivity/docs/interconnect)
+- [Authentication](https://cloud.google.com/docs/authentication)
 - [Pricing](https://cloud.google.com/network-connectivity/docs/interconnect/pricing)
-- [JSON-LD Context](json-ld/json-ld.yml)
+- [Terms of Service](https://cloud.google.com/terms)
+- [Privacy Policy](https://policies.google.com/privacy)
+- [Status Page](https://status.cloud.google.com/)
+- [Support](https://cloud.google.com/network-connectivity/docs/interconnect/support)
+- [J S O N L D Context](json-ld/json-ld.yml)
+- [Integrations](https://cloud.google.com/marketplace)
 
 ## Maintainers
 
-- **FN:** API Evangelist
-- **Email:** info@apievangelist.com
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
