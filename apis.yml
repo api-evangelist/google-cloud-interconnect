@@ -42,6 +42,12 @@ apis:
       - type: JSONLDContext
         url: json-ld/json-ld.yml
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-cloud-interconnect-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-cloud-interconnect-domain-security.yml
+  - type: Authentication
+    url: authentication/google-cloud-interconnect-authentication.yml
   - type: OAuthScopes
     url: scopes/google-cloud-interconnect-scopes.yml
   - type: GitHubOrganization
