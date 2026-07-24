@@ -1,0 +1,62 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Interconnect InterconnectAttachments API
+  description: Provides programmatic access to manage interconnect connections, attachments, and locations for hybrid cloud connectivity between on-premises networks and Google Cloud.
+  version: v1
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/network-connectivity/docs/interconnect
+servers:
+- url: https://compute.googleapis.com/compute/v1
+  description: Google Cloud Interconnect production endpoint
+security:
+- oauth2:
+  - https://www.googleapis.com/auth/compute
+tags:
+- name: InterconnectAttachments
+  description: Manage VLAN attachments for interconnects
+paths:
+  /projects/{project}/regions/{region}/interconnectAttachments:
+    get:
+      operationId: listInterconnectAttachments
+      summary: Google Cloud Interconnect List interconnect attachments
+      description: Retrieves the list of interconnect attachments available in the specified region.
+      tags:
+      - InterconnectAttachments
+      parameters:
+      - name: project
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: region
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InterconnectAttachmentList'
+components:
+  schemas:
+    InterconnectAttachmentList:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: object
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/compute: Manage your Google Compute Engine resources
+            https://www.googleapis.com/auth/cloud-platform: Full access to Google Cloud Platform resources
