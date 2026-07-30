@@ -3,7 +3,20 @@ name: Google Cloud Interconnect
 description: >-
   Google Cloud Interconnect provides high-bandwidth, low-latency connections between your on-premises network and Google
   Cloud, enabling hybrid cloud architectures through dedicated or partner interconnect options.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-cloud-interconnect.png
 url: https://raw.githubusercontent.com/api-evangelist/google-cloud-interconnect/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -16,32 +29,69 @@ tags:
   - Interconnect
   - Networking
 apis:
-  - name: Google Cloud Interconnect API
-    description: >-
-      The Google Cloud Interconnect API enables programmatic management of interconnect connections, attachments, and
-      locations for establishing high-bandwidth connectivity between on-premises networks and Google Cloud.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://cloud.google.com/network-connectivity/docs/interconnect
-    baseURL: https://compute.googleapis.com/compute/v1
-    tags:
-      - Attachments
-      - Dedicated Connections
-      - Interconnect
-      - Partner Connections
-    properties:
-      - type: Documentation
-        url: https://cloud.google.com/network-connectivity/docs/interconnect/reference/rest
-      - type: OpenAPI
-        url: openapi/openapi.yml
-      - type: Authentication
-        url: https://cloud.google.com/docs/authentication
-      - type: GettingStarted
-        url: https://cloud.google.com/network-connectivity/docs/interconnect/how-to
-      - type: JSONSchema
-        url: json-schema/json-schema.yml
-      - type: JSONLDContext
-        url: json-ld/json-ld.yml
+- aid: google-cloud-interconnect:google-cloud-interconnect-interconnectattachments-api
+  name: Google Cloud Interconnect InterconnectAttachments API
+  description: Manage VLAN attachments for interconnects
+  humanURL: https://cloud.google.com/network-connectivity/docs/interconnect
+  baseURL: https://compute.googleapis.com/compute/v1
+  tags:
+  - InterconnectAttachments
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-interconnect-interconnectattachments-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/network-connectivity/docs/interconnect/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/network-connectivity/docs/interconnect/how-to
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLDContext
+    url: json-ld/json-ld.yml
+- aid: google-cloud-interconnect:google-cloud-interconnect-interconnectlocations-api
+  name: Google Cloud Interconnect InterconnectLocations API
+  description: Query available interconnect locations
+  humanURL: https://cloud.google.com/network-connectivity/docs/interconnect
+  baseURL: https://compute.googleapis.com/compute/v1
+  tags:
+  - InterconnectLocations
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-interconnect-interconnectlocations-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/network-connectivity/docs/interconnect/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/network-connectivity/docs/interconnect/how-to
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLDContext
+    url: json-ld/json-ld.yml
+- aid: google-cloud-interconnect:google-cloud-interconnect-interconnects-api
+  name: Google Cloud Interconnect Interconnects API
+  description: Manage interconnect connections
+  humanURL: https://cloud.google.com/network-connectivity/docs/interconnect
+  baseURL: https://compute.googleapis.com/compute/v1
+  tags:
+  - Interconnects
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-interconnect-interconnects-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/network-connectivity/docs/interconnect/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/network-connectivity/docs/interconnect/how-to
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLDContext
+    url: json-ld/json-ld.yml
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/google-cloud-interconnect/overview
   - type: AgenticAccess
     url: agentic-access/google-cloud-interconnect-agentic-access.yml
   - type: VulnerabilityDisclosure
