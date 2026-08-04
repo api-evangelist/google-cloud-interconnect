@@ -1,0 +1,18 @@
+{
+  "provider": "google-cloud-interconnect",
+  "sources": [
+    "google-cloud-interconnect-interconnectattachments-api-openapi.yml",
+    "google-cloud-interconnect-interconnectlocations-api-openapi.yml",
+    "google-cloud-interconnect-interconnects-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-cloud-interconnect-interconnectattachments-api-openapi.yml",
+    "google-cloud-interconnect-interconnectlocations-api-openapi.yml",
+    "google-cloud-interconnect-interconnects-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

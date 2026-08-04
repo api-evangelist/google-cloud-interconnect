@@ -1,0 +1,508 @@
+{
+  "info": {
+    "_postman_id": "0ac65037-6f67-4d7e-9b52-e2db6c7f972b",
+    "name": "Google Cloud Interconnect InterconnectAttachments Interconnects API",
+    "description": "Provides programmatic access to manage interconnect connections, attachments, and locations for hybrid cloud connectivity between on-premises networks and Google Cloud.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:47:46.000Z",
+    "updatedAt": "2026-07-28T01:47:46.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-0ac65037-6f67-4d7e-9b52-e2db6c7f972b"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{project}",
+          "item": [
+            {
+              "name": "global",
+              "item": [
+                {
+                  "name": "interconnects",
+                  "item": [
+                    {
+                      "name": "{interconnect}",
+                      "item": [
+                        {
+                          "name": "Google Cloud Interconnect Get an interconnect",
+                          "id": "cc64b7d0-defc-447f-a518-71cd29e00f10",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:project/global/interconnects/:interconnect",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":project",
+                                "global",
+                                "interconnects",
+                                ":interconnect"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "d5876075-dff5-4ced-80d9-9b13638c6c12",
+                                  "key": "project",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "6df8ff88-2902-43a0-a391-1a9ff3a4c571",
+                                  "key": "interconnect",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Returns the specified interconnect resource."
+                          },
+                          "response": [
+                            {
+                              "id": "a032f397-9c77-46cd-ba53-10f3ca4e1bdf",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:project/global/interconnects/:interconnect",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":project",
+                                    "global",
+                                    "interconnects",
+                                    ":interconnect"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "project"
+                                    },
+                                    {
+                                      "key": "interconnect"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"location\": \"<string>\",\n  \"linkType\": \"LINK_TYPE_ETHERNET_10G_LR\",\n  \"requestedLinkCount\": \"<integer>\",\n  \"interconnectType\": \"IT_PRIVATE\",\n  \"state\": \"ACTIVE\",\n  \"operationalStatus\": \"OS_UNPROVISIONED\",\n  \"selfLink\": \"<string>\"\n}",
+                              "createdAt": "2026-07-28T01:47:46.000Z",
+                              "updatedAt": "2026-07-28T01:47:46.000Z",
+                              "uid": "35240-a032f397-9c77-46cd-ba53-10f3ca4e1bdf"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:47:46.000Z",
+                          "updatedAt": "2026-07-28T01:47:46.000Z",
+                          "uid": "35240-cc64b7d0-defc-447f-a518-71cd29e00f10"
+                        },
+                        {
+                          "name": "Google Cloud Interconnect Delete an interconnect",
+                          "id": "883739c7-ec99-4fd2-b0d2-5631fa6b6984",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:project/global/interconnects/:interconnect",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":project",
+                                "global",
+                                "interconnects",
+                                ":interconnect"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "4ffbf89c-d268-4ca3-8fb7-ee89acc35d3c",
+                                  "key": "project",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "769c8aae-7a24-422b-94ce-ce85e23eb3dd",
+                                  "key": "interconnect",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Deletes the specified interconnect."
+                          },
+                          "response": [
+                            {
+                              "id": "6c30fec9-7e7b-4abc-8ad4-f3efe51a360f",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "DELETE",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:project/global/interconnects/:interconnect",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":project",
+                                    "global",
+                                    "interconnects",
+                                    ":interconnect"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "project"
+                                    },
+                                    {
+                                      "key": "interconnect"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"targetLink\": \"<string>\"\n}",
+                              "createdAt": "2026-07-28T01:47:46.000Z",
+                              "updatedAt": "2026-07-28T01:47:46.000Z",
+                              "uid": "35240-6c30fec9-7e7b-4abc-8ad4-f3efe51a360f"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:47:46.000Z",
+                          "updatedAt": "2026-07-28T01:47:46.000Z",
+                          "uid": "35240-883739c7-ec99-4fd2-b0d2-5631fa6b6984"
+                        }
+                      ],
+                      "id": "9c1b1906-133c-4e92-adb6-c1b5f904d156",
+                      "createdAt": "2026-07-28T01:47:46.000Z",
+                      "updatedAt": "2026-07-28T01:47:46.000Z",
+                      "uid": "35240-9c1b1906-133c-4e92-adb6-c1b5f904d156"
+                    },
+                    {
+                      "name": "Google Cloud Interconnect List interconnects",
+                      "id": "8ae25694-3046-4182-9785-33634feff1aa",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/projects/:project/global/interconnects",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "projects",
+                            ":project",
+                            "global",
+                            "interconnects"
+                          ],
+                          "variable": [
+                            {
+                              "id": "c826c92b-5ecc-4e5e-861b-87b4b9960a4f",
+                              "key": "project",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Retrieves the list of interconnects available to the specified project."
+                      },
+                      "response": [
+                        {
+                          "id": "956612c0-ce9e-4448-a834-d44c0555677e",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:project/global/interconnects",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":project",
+                                "global",
+                                "interconnects"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "project"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"items\": [\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"location\": \"<string>\",\n      \"linkType\": \"LINK_TYPE_ETHERNET_10G_LR\",\n      \"requestedLinkCount\": \"<integer>\",\n      \"interconnectType\": \"DEDICATED\",\n      \"state\": \"UNPROVISIONED\",\n      \"operationalStatus\": \"OS_UNPROVISIONED\",\n      \"selfLink\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"location\": \"<string>\",\n      \"linkType\": \"LINK_TYPE_ETHERNET_100G_LR\",\n      \"requestedLinkCount\": \"<integer>\",\n      \"interconnectType\": \"PARTNER\",\n      \"state\": \"ACTIVE\",\n      \"operationalStatus\": \"OS_ACTIVE\",\n      \"selfLink\": \"<string>\"\n    }\n  ]\n}",
+                          "createdAt": "2026-07-28T01:47:46.000Z",
+                          "updatedAt": "2026-07-28T01:47:46.000Z",
+                          "uid": "35240-956612c0-ce9e-4448-a834-d44c0555677e"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T01:47:46.000Z",
+                      "updatedAt": "2026-07-28T01:47:46.000Z",
+                      "uid": "35240-8ae25694-3046-4182-9785-33634feff1aa"
+                    },
+                    {
+                      "name": "Google Cloud Interconnect Create an interconnect",
+                      "id": "13de001d-bf93-4cd9-a993-b921bd048836",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"location\": \"<string>\",\n  \"linkType\": \"LINK_TYPE_ETHERNET_10G_LR\",\n  \"requestedLinkCount\": \"<integer>\",\n  \"interconnectType\": \"IT_PRIVATE\",\n  \"state\": \"ACTIVE\",\n  \"operationalStatus\": \"OS_UNPROVISIONED\",\n  \"selfLink\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/projects/:project/global/interconnects",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "projects",
+                            ":project",
+                            "global",
+                            "interconnects"
+                          ],
+                          "variable": [
+                            {
+                              "id": "63942fa8-73c3-4088-a8a4-7d1abc4320de",
+                              "key": "project",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Creates an interconnect in the specified project."
+                      },
+                      "response": [
+                        {
+                          "id": "8e69ef86-7baa-4f4e-bd0c-f48153e0cd68",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"location\": \"<string>\",\n  \"linkType\": \"LINK_TYPE_ETHERNET_10G_LR\",\n  \"requestedLinkCount\": \"<integer>\",\n  \"interconnectType\": \"IT_PRIVATE\",\n  \"state\": \"ACTIVE\",\n  \"operationalStatus\": \"OS_UNPROVISIONED\",\n  \"selfLink\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:project/global/interconnects",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":project",
+                                "global",
+                                "interconnects"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "project"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"targetLink\": \"<string>\"\n}",
+                          "createdAt": "2026-07-28T01:47:46.000Z",
+                          "updatedAt": "2026-07-28T01:47:46.000Z",
+                          "uid": "35240-8e69ef86-7baa-4f4e-bd0c-f48153e0cd68"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T01:47:46.000Z",
+                      "updatedAt": "2026-07-28T01:47:46.000Z",
+                      "uid": "35240-13de001d-bf93-4cd9-a993-b921bd048836"
+                    }
+                  ],
+                  "id": "c3250960-36c5-46c1-8473-c09f0e021257",
+                  "createdAt": "2026-07-28T01:47:46.000Z",
+                  "updatedAt": "2026-07-28T01:47:46.000Z",
+                  "uid": "35240-c3250960-36c5-46c1-8473-c09f0e021257"
+                }
+              ],
+              "id": "d95fefcb-7be5-41f5-ae2d-de4cce6e6b57",
+              "createdAt": "2026-07-28T01:47:46.000Z",
+              "updatedAt": "2026-07-28T01:47:46.000Z",
+              "uid": "35240-d95fefcb-7be5-41f5-ae2d-de4cce6e6b57"
+            }
+          ],
+          "id": "1ac10565-2c77-4cef-8613-1113660efda0",
+          "createdAt": "2026-07-28T01:47:46.000Z",
+          "updatedAt": "2026-07-28T01:47:46.000Z",
+          "uid": "35240-1ac10565-2c77-4cef-8613-1113660efda0"
+        }
+      ],
+      "id": "8f1033a5-6d1a-404c-9e91-ade2859e5896",
+      "createdAt": "2026-07-28T01:47:46.000Z",
+      "updatedAt": "2026-07-28T01:47:46.000Z",
+      "uid": "35240-8f1033a5-6d1a-404c-9e91-ade2859e5896"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://compute.googleapis.com/compute/v1"
+    }
+  ]
+}

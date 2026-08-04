@@ -1,0 +1,173 @@
+{
+  "info": {
+    "_postman_id": "aab7e007-679c-45cc-b7c4-b0e7af011f12",
+    "name": "Google Cloud Interconnect InterconnectAttachments InterconnectLocations API",
+    "description": "Provides programmatic access to manage interconnect connections, attachments, and locations for hybrid cloud connectivity between on-premises networks and Google Cloud.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:47:45.000Z",
+    "updatedAt": "2026-07-28T01:47:45.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-aab7e007-679c-45cc-b7c4-b0e7af011f12"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{project}",
+          "item": [
+            {
+              "name": "global",
+              "item": [
+                {
+                  "name": "interconnectLocations",
+                  "item": [
+                    {
+                      "name": "Google Cloud Interconnect List interconnect locations",
+                      "id": "02cefd36-f874-4c90-bd86-9123705ecd68",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/projects/:project/global/interconnectLocations",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "projects",
+                            ":project",
+                            "global",
+                            "interconnectLocations"
+                          ],
+                          "variable": [
+                            {
+                              "id": "e80e1acd-d92f-45c0-81ee-b111d19c0274",
+                              "key": "project",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Retrieves the list of interconnect locations available to the specified project."
+                      },
+                      "response": [
+                        {
+                          "id": "7104783f-6ea9-468c-a08f-135d1453d960",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:project/global/interconnectLocations",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":project",
+                                "global",
+                                "interconnectLocations"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "project"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-07-28T01:47:46.000Z",
+                          "updatedAt": "2026-07-28T01:47:46.000Z",
+                          "uid": "35240-7104783f-6ea9-468c-a08f-135d1453d960"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T01:47:46.000Z",
+                      "updatedAt": "2026-07-28T01:47:46.000Z",
+                      "uid": "35240-02cefd36-f874-4c90-bd86-9123705ecd68"
+                    }
+                  ],
+                  "id": "ac542dd4-f816-41b4-a186-dee5183bf354",
+                  "createdAt": "2026-07-28T01:47:46.000Z",
+                  "updatedAt": "2026-07-28T01:47:46.000Z",
+                  "uid": "35240-ac542dd4-f816-41b4-a186-dee5183bf354"
+                }
+              ],
+              "id": "ffa3254b-7f3f-48c6-9e96-6cee469c7269",
+              "createdAt": "2026-07-28T01:47:46.000Z",
+              "updatedAt": "2026-07-28T01:47:46.000Z",
+              "uid": "35240-ffa3254b-7f3f-48c6-9e96-6cee469c7269"
+            }
+          ],
+          "id": "f3c13670-244f-468c-bbfd-cf04c478fa3a",
+          "createdAt": "2026-07-28T01:47:46.000Z",
+          "updatedAt": "2026-07-28T01:47:46.000Z",
+          "uid": "35240-f3c13670-244f-468c-bbfd-cf04c478fa3a"
+        }
+      ],
+      "id": "a03af9d4-69b3-4cf7-823e-529cc028fd81",
+      "createdAt": "2026-07-28T01:47:46.000Z",
+      "updatedAt": "2026-07-28T01:47:46.000Z",
+      "uid": "35240-a03af9d4-69b3-4cf7-823e-529cc028fd81"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://compute.googleapis.com/compute/v1"
+    }
+  ]
+}

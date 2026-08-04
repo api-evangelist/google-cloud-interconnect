@@ -1,0 +1,193 @@
+{
+  "info": {
+    "_postman_id": "ef68b71f-ba84-4d25-bbab-f9f21192df0d",
+    "name": "Google Cloud Interconnect InterconnectAttachments API",
+    "description": "Provides programmatic access to manage interconnect connections, attachments, and locations for hybrid cloud connectivity between on-premises networks and Google Cloud.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:47:44.000Z",
+    "updatedAt": "2026-07-28T01:47:44.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-ef68b71f-ba84-4d25-bbab-f9f21192df0d"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{project}",
+          "item": [
+            {
+              "name": "regions",
+              "item": [
+                {
+                  "name": "{region}",
+                  "item": [
+                    {
+                      "name": "interconnectAttachments",
+                      "item": [
+                        {
+                          "name": "Google Cloud Interconnect List interconnect attachments",
+                          "id": "7f0b480a-5de4-45f0-90a7-d2175819f28a",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:project/regions/:region/interconnectAttachments",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":project",
+                                "regions",
+                                ":region",
+                                "interconnectAttachments"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "6d7b91cf-77ac-4c19-b62b-7cbfb75f4d66",
+                                  "key": "project",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "d6c78961-87db-45d7-8afb-4b5ac47f8f6f",
+                                  "key": "region",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Retrieves the list of interconnect attachments available in the specified region."
+                          },
+                          "response": [
+                            {
+                              "id": "db3a4a99-0927-472f-85cc-dacec9740225",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:project/regions/:region/interconnectAttachments",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":project",
+                                    "regions",
+                                    ":region",
+                                    "interconnectAttachments"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "project"
+                                    },
+                                    {
+                                      "key": "region"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-07-28T01:47:45.000Z",
+                              "updatedAt": "2026-07-28T01:47:45.000Z",
+                              "uid": "35240-db3a4a99-0927-472f-85cc-dacec9740225"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:47:45.000Z",
+                          "updatedAt": "2026-07-28T01:47:45.000Z",
+                          "uid": "35240-7f0b480a-5de4-45f0-90a7-d2175819f28a"
+                        }
+                      ],
+                      "id": "37891e0a-fa9a-412b-abd6-a4f8e024f15c",
+                      "createdAt": "2026-07-28T01:47:45.000Z",
+                      "updatedAt": "2026-07-28T01:47:45.000Z",
+                      "uid": "35240-37891e0a-fa9a-412b-abd6-a4f8e024f15c"
+                    }
+                  ],
+                  "id": "a1cf7a62-388b-44e3-a552-f411758af8aa",
+                  "createdAt": "2026-07-28T01:47:45.000Z",
+                  "updatedAt": "2026-07-28T01:47:45.000Z",
+                  "uid": "35240-a1cf7a62-388b-44e3-a552-f411758af8aa"
+                }
+              ],
+              "id": "d6bdb248-1760-4043-9f71-21d3ce40c7f3",
+              "createdAt": "2026-07-28T01:47:45.000Z",
+              "updatedAt": "2026-07-28T01:47:45.000Z",
+              "uid": "35240-d6bdb248-1760-4043-9f71-21d3ce40c7f3"
+            }
+          ],
+          "id": "47a7d395-a9ba-41a7-b86a-1bc20569eec0",
+          "createdAt": "2026-07-28T01:47:45.000Z",
+          "updatedAt": "2026-07-28T01:47:45.000Z",
+          "uid": "35240-47a7d395-a9ba-41a7-b86a-1bc20569eec0"
+        }
+      ],
+      "id": "406887e2-859a-4a6a-9e2d-f1462ad4b874",
+      "createdAt": "2026-07-28T01:47:45.000Z",
+      "updatedAt": "2026-07-28T01:47:45.000Z",
+      "uid": "35240-406887e2-859a-4a6a-9e2d-f1462ad4b874"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://compute.googleapis.com/compute/v1"
+    }
+  ]
+}
