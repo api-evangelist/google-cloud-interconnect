@@ -102,6 +102,9 @@ apis:
   - type: JSONLDContext
     url: json-ld/json-ld.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/google-cloud-interconnect-capability-edges.yml
+    name: Google Cloud Interconnect Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/google-cloud-interconnect/overview
   - type: AgenticAccess

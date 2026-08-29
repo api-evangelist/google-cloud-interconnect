@@ -1,0 +1,36 @@
+slug: google-cloud-interconnect
+provider: Google Cloud Interconnect
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Telecommunications
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Interconnects
+  spec_file: google-cloud-interconnect-interconnects-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: POST /projects/{project}/global/interconnects  createInterconnect ... "manage interconnect
+    connections, attachments, and locations for hybrid cloud connectivity between on-premises networks
+    and Google Cloud"
+  reason: Operations provision cloud network connectivity resources for the buyer's own hybrid cloud estate
+    — IT infrastructure (network/cloud) management, not carrier interconnect agreements between operators.
+- tag: InterconnectAttachments
+  spec_file: google-cloud-interconnect-interconnectattachments-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: '"List interconnect attachments"; "manage interconnect connections, attachments, and locations
+    for hybrid cloud connectivity between on-premises networks and Google Cloud"'
+  reason: Hybrid cloud network connectivity resources — IT infrastructure (network) management. Not telecom
+    interconnect agreements between operators despite the word 'interconnect'.
