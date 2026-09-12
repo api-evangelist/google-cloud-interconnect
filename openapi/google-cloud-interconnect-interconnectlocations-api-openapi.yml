@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Google Cloud Interconnect InterconnectAttachments InterconnectLocations API
+  title: Google Cloud Interconnect InterconnectAttachments Interconnect Locations API
   description: Provides programmatic access to manage interconnect connections, attachments, and locations for hybrid cloud connectivity between on-premises networks and Google Cloud.
   version: v1
   contact:
