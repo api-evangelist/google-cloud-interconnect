@@ -87,6 +87,8 @@ apis:
   humanURL: https://cloud.google.com/network-connectivity/docs/interconnect
   baseURL: https://compute.googleapis.com/compute/v1
   tags:
+  - Interconnect
+  tags_raw:
   - Interconnects
   properties:
   - type: OpenAPI
