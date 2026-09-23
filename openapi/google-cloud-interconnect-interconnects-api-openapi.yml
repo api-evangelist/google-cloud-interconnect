@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud Interconnect InterconnectAttachments Interconnects API
+  title: Google Cloud Interconnect Interconnects API
   description: Provides programmatic access to manage interconnect connections, attachments, and locations for hybrid cloud connectivity between on-premises networks and Google Cloud.
   version: v1
   contact:
@@ -112,6 +112,13 @@ paths:
                 $ref: '#/components/schemas/Operation'
 components:
   schemas:
+    InterconnectList:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Interconnect'
     Operation:
       type: object
       properties:
@@ -123,13 +130,6 @@ components:
           type: string
         targetLink:
           type: string
-    InterconnectList:
-      type: object
-      properties:
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Interconnect'
     Interconnect:
       type: object
       properties:
