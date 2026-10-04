@@ -112,6 +112,17 @@ paths:
                 $ref: '#/components/schemas/Operation'
 components:
   schemas:
+    Operation:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+        targetLink:
+          type: string
     Interconnect:
       type: object
       properties:
@@ -164,17 +175,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Interconnect'
-    Operation:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        status:
-          type: string
-        targetLink:
-          type: string
   securitySchemes:
     oauth2:
       type: oauth2
